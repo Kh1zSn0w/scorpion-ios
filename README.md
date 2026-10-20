@@ -1,5 +1,7 @@
 # Scorpion
 
+An unsigned ARM64 iPhone IPA has been built and independently verified. The iPhone 17 Pro Max simulator on iOS 26.5 loaded the live site and displayed the scorpion correctly. The SE 2 simulator timed out during boot, before app launch. See VALIDATION.md for exact evidence and remaining device/service limitations. Build artifact: https://github.com/Kh1zSn0w/scorpion-ios/actions/runs/39403773571/artifacts/12256024451 .
+
 An original UIKit shell for the live https://cobalt.meowing.de/ website. The service remains remote, including its navigation, settings, backend requests and processing. Only mascot image elements are changed locally to the supplied scorpion. Site attribution and article text stay on the website.
 
 Requires iOS 15 or later. Bundle ID `de.cronix.scorpion`, version 1.0, build 1. Designed with safe areas for the iPhone SE 2 and larger iPhones. iOS 26 and iOS 27 operation has not been verified.
