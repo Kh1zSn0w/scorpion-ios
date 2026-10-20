@@ -17,6 +17,8 @@ The device build creates `build/Scorpion-unsigned.ipa` only after Xcode compiles
 
 The checked-in project is generated with `python3 scripts/generate_project.py`, using only the Python standard library. Open `Scorpion.xcodeproj` to run with your own signing team on a real iPhone. The GitHub workflow uses macos-26, prints the actual Xcode/SDK versions, builds simulator and device targets and uploads the unsigned IPA. Nothing is uploaded until a user publishes this repository and runs CI.
 
+After simulator compilation, CI runs `python3 scripts/simulator_smoke.py`. It selects actual available simulator inventory, prefers iPhone SE 2 (explicitly labeling an SE 3 fallback) and iPhone 17 Pro Max (explicitly labeling an older Pro Max fallback). Each target installs the real compiled app, launches it, waits 15 seconds for network loading, captures a screenshot and checks that its process remains alive. Screenshots, runtime/device metadata and process evidence are uploaded even if a target fails. Missing suitable simulators fail the smoke step. These screenshots require visual review and do not prove downloads, service behavior or physical-device compatibility.
+
 ## Downloads and sharing
 
 Downloads use WKDownload for explicit download actions, attachment responses, non-displayable responses and external media responses. HTTP(S) pages are inspected before external pages open in Safari's in-app browser. New-window actions stay in the current web view until response routing decides their destination. Custom schemes and local URLs are blocked. No TLS exceptions or native file-byte bridge are installed.
@@ -38,7 +40,7 @@ node tests/mascot.test.cjs
 
 The standalone Swift tests run as part of both macOS build commands. They exercise traversal, control characters, UTF-8 filename length, real duplicate files, original preservation, origin/response routing and blocked URL schemes. JavaScript tests exercise dynamic insertion, changed sources, observer termination, foreign documents/images, native-share preservation, fallback blobs and malformed input. Python verifier tests use temporary synthetic fixtures to test rejection of bad package structures, signatures, identities and architectures. Those fixtures are not builds. Source consistency checks are not a Swift compiler.
 
-No Xcode build, simulator run, device test or generated IPA is claimed from this Windows implementation session. Service-specific save flows, upload/remux, website settings, HTTP authentication, redirects, cookies, persistent login, media playback and browser APIs require device validation. The remote site can change independently.
+The initial implementation session ran on Windows. A subsequent macOS [Actions run](https://github.com/Kh1zSn0w/scorpion-ios/actions/runs/39403318767) passed simulator/device compilation and standalone Swift core tests, then failed on a `lipo` argument-order error corrected in this follow-up. Full IPA verification, runtime launch and screenshots have not yet been verified in this record; see VALIDATION.md. Service-specific save flows, upload/remux, website settings, HTTP authentication, redirects, cookies, persistent login, media playback and browser APIs require device validation. The remote site can change independently.
 
 ## Device acceptance checklist
 

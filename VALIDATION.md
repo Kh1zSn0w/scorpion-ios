@@ -9,4 +9,6 @@ Performed on Windows on 2026-10-20:
 
 Not performed: Swift compilation or standalone Swift tests, xcodebuild, simulator execution, device execution, real download/remux/export, real IPA packaging, signing or installation. This machine does not have Xcode. No installable or unsigned IPA has been produced by this implementation session.
 
-The macOS workflow is prepared to compile both simulator and device, run the Swift fixtures, package the actual built app and verify the unsigned ARM64 IPA. That workflow has not run yet. Device acceptance cases are listed in README.md.
+Subsequent macOS evidence: GitHub Actions run [39403318767](https://github.com/Kh1zSn0w/scorpion-ios/actions/runs/39403318767) passed simulator and device compilation and the standalone Swift core tests. The pipeline then failed because the `lipo -verify_arch` command placed its input after the variadic architecture argument. The command now places the binary input first. That correction has not yet run on macOS. Full IPA verification/upload, simulator launch and visual correctness remain pending.
+
+The follow-up smoke script has 5 additional local Python fixture tests, for 11 Python tests in total. Those passed on Windows. Actual simulator screenshots and process-survival evidence have not yet been collected. The script and workflow will attempt that on a subsequent approved push. Device acceptance cases are listed in README.md.

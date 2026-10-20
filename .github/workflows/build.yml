@@ -20,7 +20,18 @@ jobs:
         run: bash scripts/build.sh simulator
       - name: Device compile and unsigned IPA verification
         run: bash scripts/build.sh device
+      - name: Simulator launch and screenshot smoke checks
+        timeout-minutes: 12
+        run: python3 scripts/simulator_smoke.py
+      - name: Upload actual simulator evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Scorpion-simulator-evidence
+          path: build/screenshots/
+          if-no-files-found: warn
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: Scorpion-unsigned
           path: build/Scorpion-unsigned.ipa

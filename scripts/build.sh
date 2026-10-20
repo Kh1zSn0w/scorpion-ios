@@ -14,7 +14,7 @@ if [[ "$mode" == "simulator" ]]; then
 elif [[ "$mode" == "device" ]]; then
   xcodebuild -project Scorpion.xcodeproj -scheme Scorpion -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath build/device ARCHS=arm64 CODE_SIGNING_ALLOWED=NO build
   python3 scripts/package_ipa.py build/device/Build/Products/Release-iphoneos/Scorpion.app build/Scorpion-unsigned.ipa
-  xcrun lipo -verify_arch arm64 build/device/Build/Products/Release-iphoneos/Scorpion.app/Scorpion
+  xcrun lipo build/device/Build/Products/Release-iphoneos/Scorpion.app/Scorpion -verify_arch arm64
   python3 scripts/verify_ipa.py build/Scorpion-unsigned.ipa
 else
   echo 'Usage: bash scripts/build.sh [device|simulator]' >&2
