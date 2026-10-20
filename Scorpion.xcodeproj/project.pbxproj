@@ -1,0 +1,35 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+F69144CC450C44122A28F118 = { isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; path = "Scorpion/AppDelegate.swift"; sourceTree = "<group>"; };
+A07A4B4A7A4CC978B6F0AD8B = { isa = PBXBuildFile; fileRef = F69144CC450C44122A28F118; };
+6505A84BB37594B91F716E62 = { isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; path = "Scorpion/BrowserViewController.swift"; sourceTree = "<group>"; };
+25D22DCE5363C378B06B2672 = { isa = PBXBuildFile; fileRef = 6505A84BB37594B91F716E62; };
+FB5ABDB919AE65E50F0D3BC7 = { isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; path = "Scorpion/DownloadFiles.swift"; sourceTree = "<group>"; };
+FEA77AC0E9C66F21C789B647 = { isa = PBXBuildFile; fileRef = FB5ABDB919AE65E50F0D3BC7; };
+72DAF264442BFA1DDBDECF2E = { isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; path = "Scorpion/FilesViewController.swift"; sourceTree = "<group>"; };
+141E9BDA3F0897D8731E5B37 = { isa = PBXBuildFile; fileRef = 72DAF264442BFA1DDBDECF2E; };
+BC3E839DB87C3C04B66BFAC8 = { isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; path = "Scorpion/NavigationRules.swift"; sourceTree = "<group>"; };
+9506D5CF71E2853D03422CDB = { isa = PBXBuildFile; fileRef = BC3E839DB87C3C04B66BFAC8; };
+6287DACD04DA1275AA18C75F = { isa = PBXFileReference; lastKnownFileType = "sourcecode.swift"; path = "Scorpion/SceneDelegate.swift"; sourceTree = "<group>"; };
+397C7A32FCED78AD0E31D8FC = { isa = PBXBuildFile; fileRef = 6287DACD04DA1275AA18C75F; };
+E07917B5AEE66DA554DBD2C0 = { isa = PBXFileReference; lastKnownFileType = "sourcecode.javascript"; path = "Scorpion/Mascot.js"; sourceTree = "<group>"; };
+79359F32B8F79C91888A49D1 = { isa = PBXBuildFile; fileRef = E07917B5AEE66DA554DBD2C0; };
+B450289E19BC7541CAC04817 = { isa = PBXFileReference; lastKnownFileType = "image.png"; path = "Scorpion/scorpion.png"; sourceTree = "<group>"; };
+CABF509DDCE84DDF3BD68ADA = { isa = PBXBuildFile; fileRef = B450289E19BC7541CAC04817; };
+EA882DB944F30BD7F34997DD = { isa = PBXFileReference; lastKnownFileType = "folder.assetcatalog"; path = "Scorpion/Assets.xcassets"; sourceTree = "<group>"; };
+58B14259BBA77610D5304716 = { isa = PBXBuildFile; fileRef = EA882DB944F30BD7F34997DD; };
+7D1043473D55BFA90E8530D3 = { isa = PBXFileReference; explicitFileType = wrapper.application; path = Scorpion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+FBDC4F23F93125BBEEAE800C = { isa = PBXGroup; children = (7D1043473D55BFA90E8530D3,); name = Products; sourceTree = "<group>"; };
+64292B1C2B2E13EAD8788FC8 = { isa = PBXGroup; children = (F69144CC450C44122A28F118,6505A84BB37594B91F716E62,FB5ABDB919AE65E50F0D3BC7,72DAF264442BFA1DDBDECF2E,BC3E839DB87C3C04B66BFAC8,6287DACD04DA1275AA18C75F,E07917B5AEE66DA554DBD2C0,B450289E19BC7541CAC04817,EA882DB944F30BD7F34997DD,FBDC4F23F93125BBEEAE800C,); sourceTree = "<group>"; };
+BCE16DD0260827ECF338C787 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A07A4B4A7A4CC978B6F0AD8B,25D22DCE5363C378B06B2672,FEA77AC0E9C66F21C789B647,141E9BDA3F0897D8731E5B37,9506D5CF71E2853D03422CDB,397C7A32FCED78AD0E31D8FC,); runOnlyForDeploymentPostprocessing = 0; };
+0189424A5A60FED329FA868E = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (79359F32B8F79C91888A49D1,CABF509DDCE84DDF3BD68ADA,58B14259BBA77610D5304716,); runOnlyForDeploymentPostprocessing = 0; };
+7561BFB015D8F536760CB671 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+AB52CB08E0FDF02BF6C67C33 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+59E1BEE911F66DA37FEBACDC = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = Scorpion; PRODUCT_BUNDLE_IDENTIFIER = de.cronix.scorpion; INFOPLIST_FILE = Scorpion/Info.plist; TARGETED_DEVICE_FAMILY = 1; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+5283471FF90C511CFE244FFF = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+F4C425279CD5DDD18FD6DC6D = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_NAME = Scorpion; PRODUCT_BUNDLE_IDENTIFIER = de.cronix.scorpion; INFOPLIST_FILE = Scorpion/Info.plist; TARGETED_DEVICE_FAMILY = 1; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+4BA304E783CFBB9FA6E56552 = { isa = XCConfigurationList; buildConfigurations = (AB52CB08E0FDF02BF6C67C33,5283471FF90C511CFE244FFF,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+1329ED92EA4767251759D0DA = { isa = XCConfigurationList; buildConfigurations = (59E1BEE911F66DA37FEBACDC,F4C425279CD5DDD18FD6DC6D,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+0E8A3AD980EC179856012B7E = { isa = PBXNativeTarget; buildConfigurationList = 1329ED92EA4767251759D0DA; buildPhases = (BCE16DD0260827ECF338C787,7561BFB015D8F536760CB671,0189424A5A60FED329FA868E,); buildRules = (); dependencies = (); name = Scorpion; productName = Scorpion; productReference = 7D1043473D55BFA90E8530D3; productType = "com.apple.product-type.application"; };
+98F54143AB4E86B28C3AFEE0 = { isa = PBXProject; attributes = { LastUpgradeCheck = 2600; }; buildConfigurationList = 4BA304E783CFBB9FA6E56552; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base,); mainGroup = 64292B1C2B2E13EAD8788FC8; productRefGroup = FBDC4F23F93125BBEEAE800C; projectDirPath = ""; projectRoot = ""; targets = (0E8A3AD980EC179856012B7E,); };
+}; rootObject = 98F54143AB4E86B28C3AFEE0; }
