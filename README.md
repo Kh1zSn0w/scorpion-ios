@@ -4,7 +4,7 @@ An unsigned ARM64 iPhone IPA has been built and independently verified. The iPho
 
 An original UIKit shell for the live https://cobalt.meowing.de/ website. The service remains remote, including its navigation, settings, backend requests and processing. Only mascot image elements are changed locally to the supplied scorpion. Site attribution and article text stay on the website.
 
-Requires iOS 15 or later. Bundle ID `de.cronix.scorpion`, version 1.0, build 1. Designed with safe areas for the iPhone SE 2 and larger iPhones. iOS 26 and iOS 27 operation has not been verified.
+Requires iOS 15 or later. Bundle ID `de.cronix.scorpion`, version 1.0, build 1. Designed with safe areas for the iPhone SE 2 and larger iPhones. Launch on iOS 26.5 was observed in the iPhone 17 Pro Max simulator. SE 2 and iOS 27 execution remain unverified.
 
 ## Build on macOS
 
@@ -52,3 +52,4 @@ The initial implementation session ran on Windows. A subsequent macOS [Actions r
 4. Interrupt network access during initial load and during a download. Verify Retry works, failures are visible and partial files never enter the completed list. Relaunch during a download to inspect cleanup.
 5. Exercise target=_blank for site pages, external HTML and download URLs, JavaScript alert/confirm/prompt and blocked file/custom-scheme links.
 6. Test remux with realistic inputs, memory pressure and screen locking. Record actual iOS versions, service URLs, file sizes and results. Test iOS 27 separately when a usable SDK/device exists.
+
